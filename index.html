@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match-2 Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="difficulty-modal" class="difficulty-modal">
+        <div class="modal-content">
+            <h2>Select Difficulty</h2>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div class="level-info">
+                <div class="level-label">LEVEL</div>
+                <div class="level-value" id="level-counter">1</div>
+            </div>
+            <div class="score-panel">
+                <div class="counter-panel moves">
+                    <div class="counter-label">MOVES</div>
+                    <div class="counter-value" id="moves-counter">18</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="moves-progress"></div>
+                    </div>
+                </div>
+                <div class="counter-panel score">
+                    <div class="counter-label">SCORE</div>
+                    <div class="counter-value" id="score-counter">0</div>
+                    <div class="high-score" id="high-score">Best: 0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-board" class="game-board"></div>
+        
+        <div class="tutorial-text">
+            Tap 2 or more same colored cubes to collect them!
+        </div>
+    </div>
+
+    <div id="level-complete" class="level-complete-modal">
+        <div class="modal-content">
+            <h2>Level Complete!</h2>
+            <div class="stats">
+                <div class="stat-item">Score: <span id="final-score">0</span></div>
+                <div class="stat-item">Moves Left: <span id="moves-left">0</span></div>
+                <div class="stat-item">Bonus: <span id="level-bonus">0</span></div>
+            </div>
+            <button id="next-level" class="next-level-btn">Next Level →</button>
+        </div>
+    </div>
+
+    <div id="particles-container" class="particles-container"></div>
+
+    <script src="game.js"></script>
+</body>
+</html> 
